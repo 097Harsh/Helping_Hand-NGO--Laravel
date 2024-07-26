@@ -2,13 +2,11 @@
 
 namespace App\Http\Middleware;
 use Session;
-
-use Illuminate\Support\Facades\Auth;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class Isadmin
+class VolunteerMiddleware
 {
     /**
      * Handle an incoming request.
@@ -17,7 +15,7 @@ class Isadmin
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!Session::has('user_id') && !Session::has('volunteer_id')) {
+        if (!Session::has('volunteer_id')) {
             return redirect('login')->with('fail', 'Please login first...');
         }
 

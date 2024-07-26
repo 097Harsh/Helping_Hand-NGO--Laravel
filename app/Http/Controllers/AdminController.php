@@ -21,7 +21,7 @@ class AdminController extends Controller
         //echo "hi <br>";
         $users = User::where('role_id','=','2')->count();
         $volunteer = User::where('role_id','=','3')->count();
-        $donation = Donation::where('status','=','Completed')->count();
+        $donation = Donation::where('status','=','Delivered')->count();
         $m_donation = MoneyDonation::where('payment_status', 'Completed')->sum('amt');
         //echo "<pre>";print_r($donation);die;
         return view('admin.dashboard',compact('users','volunteer','donation','m_donation'));
@@ -181,7 +181,7 @@ class AdminController extends Controller
     public function CompleteDonation(){
         $donations = Donation::select('donation.d_id','donation.contact_name','donation.contact_person','donation.address','donation.donation_date','donation.user_id','users.user_id','users.name')
         ->join('users','donation.user_id','=','users.user_id')
-        ->where('donation.status','=','Completed')
+        ->where('donation.status','=','Delivered')
         ->paginate(10);
         //  echo "<pre>";print_r($donation);die;
         $data = compact('donations');

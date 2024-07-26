@@ -157,8 +157,8 @@ class Users extends Controller
         
          //email sending protion
          $toemail = $email;
-         $msg = "Hello, thank you for donating that amount:".$amt;
-         $subject = "Thank you for donating";
+         $msg = "We appreciate you donating this amount:".$amt;
+         $subject = "Your kindness changes lives";
          Mail::to($toemail)->send(new donationemail($msg,$subject));
  
  

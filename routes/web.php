@@ -6,6 +6,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\VolunteerController;
 
 
 /*
@@ -76,4 +77,16 @@ Route::get('/CancleRequest/{d_id}', [Users::class, 'CancleRequest'])->name('Canc
 //  Route::get('/EditProfile/{user_id}', [Users::class, 'EditProfile'])->name('EditProfile')->middleware('Isadmin');
 
 
-//
+//  *******************************  Volunteer URL's    ***********************************************
+Route::get('/volunteer_feedback', [VolunteerController::class, 'volunteer_feedback'])->name('volunteer_feedback')->middleware('Isadmin');
+Route::get('/Donation_post/{v_id}', [VolunteerController::class, 'show_donation_post'])->name('Donation_post')->middleware('Isadmin');
+Route::get('/Donation_details/{d_id}', [VolunteerController::class, 'Dontaion_Details'])->name('Donation_details')->middleware('Isadmin');
+Route::get('/Accept_Donation/{d_id}/{v_id}', [VolunteerController::class, 'Accept_Donation'])->name('Accept_Donation')->middleware('Isadmin');
+//My post
+Route::get('/MyPost/{v_id}', [VolunteerController::class, 'Mypost'])->name('MyPost')->middleware('Isadmin');
+//Received post
+Route::get('/Recevied/{d_id}', [VolunteerController::class, 'ReceviedDonation'])->name('Recevied')->middleware('Isadmin');
+//Delivered Donation
+Route::get('/Delivered/{d_id}', [VolunteerController::class, 'DeliveredDonation'])->name('Delivered')->middleware('Isadmin');
+
+

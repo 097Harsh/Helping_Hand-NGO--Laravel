@@ -21,11 +21,11 @@ return new class extends Migration
             $table->foreign('D_id')->references('D_id')->on('donation')->onDelete('cascade');
             $table->dateTime('datetime');
             $table->string('status');
-            $table->text('description');
+            //$table->text('description');
             $table->datetime('received_datetime');
-            $table->text('received_message');
+            //$table->text('received_message');
             $table->dateTime('delivery_datetime');
-            $table->text('delivery_message'); 
+            //$table->text('delivery_message'); 
             
             $table->timestamps();
         });

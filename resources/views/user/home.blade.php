@@ -1,3 +1,4 @@
+
 <script>
         @if(session('success'))
             alert("{{ session('success') }}");
@@ -5,6 +6,12 @@
             alert("{{ session('success_user') }}");
         @elseif(session('success_volunteer'))
             alert("{{ session('success_volunteer') }}");
+		@elseif(session('Accept'))
+            alert("{{ session('Accept') }}");
+		@elseif(session('Recevied'))
+            alert("{{ session('Recevied') }}");
+		@elseif(session('Doantion_success'))
+            alert("{{ session('Doantion_success') }}");
         @elseif(session('contact'))
             alert("{{ session('contact') }}");
         @elseif(session('feedback'))

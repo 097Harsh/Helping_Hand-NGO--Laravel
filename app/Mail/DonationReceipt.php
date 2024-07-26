@@ -9,16 +9,16 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class donationemail extends Mailable
+class DonationReceipt extends Mailable
 {
     use Queueable, SerializesModels;
-
-    public $mailmassage;
-    public $subject;
 
     /**
      * Create a new message instance.
      */
+    public $mailmassage;
+    public $subject;
+
     public function __construct($msg,$subject)
     {
         //
@@ -42,7 +42,7 @@ class donationemail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'emails.m_donation',
+            view: 'emails.donation',
         );
     }
 

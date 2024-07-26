@@ -78,14 +78,14 @@
 									</div>
 								</li>
 							@elseif($v_id)
-								<li class="nav-item">
+							<li class="nav-item">
 									<a class="nav-link" href="{{route('volunteer_feedback')}}">Feedback</a>
 								</li>
 									<li class="nav-item">
-										<a class="nav-link" href="{{route('Donation_post',$v_id)}}">Donation post</a>
+										<a class="nav-link" href="post_donation.php">Donation post</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" href="{{route('MyPost',$v_id)}}">My Post</a>
+										<a class="nav-link" href="my_post.php">My Post</a>
 									</li>
 									<li class="nav-item">
 									<div class="profile_details">		
