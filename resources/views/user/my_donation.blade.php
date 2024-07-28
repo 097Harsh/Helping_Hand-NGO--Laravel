@@ -57,9 +57,13 @@
                         <td>{{$donation->donation_date}}</td>
                         <td>{{$donation->contact_name}}</td>
                         <td>{{$donation->contact_person}}</td>
-                        <td>
-                          <a href="{{route('CancleRequest',$donation->D_id)}}"><button class="btn btn-danger">Cancle </button></a>
-                        </td>
+                        @if ($donation->status == "Pending")
+                          <td>
+                            <a href="{{route('CancleRequest',$donation->D_id)}}"><button class="btn btn-danger">Cancle </button></a>
+                          </td>
+                        @else
+                          <td>{{$donation->status}}</td>
+                        @endif
                     </tbody> 
                 @endforeach
             @else

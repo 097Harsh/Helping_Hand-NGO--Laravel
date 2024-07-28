@@ -167,9 +167,7 @@ class Users extends Controller
     }
     public function MyDonation($id){
         //  echo $id;die;
-        $donations = Donation::where('user_id',$id)
-        ->where('status','Pending')
-        ->get();
+        $donations = Donation::where('user_id',$id)->get();
         //echo "<pre>";print_r($donations);die;
         $data = compact('donations');
         return view('user.my_donation')->with($data);
