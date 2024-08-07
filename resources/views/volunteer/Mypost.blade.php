@@ -36,7 +36,7 @@
           <table class="table table-striped">
             <thead>
               <tr>
-                <th scope="col">Donation POst ID</th>
+                <th scope="col">Donation Post ID</th>
                 <th scope="col">Message</th>
                 <th scope="col">Status</th>
                 <th scope="col">Date-time</th>

@@ -31,7 +31,7 @@
         
           <div class="col-lg-12 form-inner-cont">
           <div class="title-content text-left">
-            <h3 class="hny-title mb-lg-5 mb-4">Your donation post</h3>
+            <h3 class="hny-title mb-lg-5 mb-4"> Donation post</h3>
           </div>
           <table class="table table-striped">
             <thead>
