@@ -50,9 +50,9 @@ class VolunteerController extends Controller
         $insert->datetime = now();
         $insert->status = "Accepted";
         $insert->received_datetime = null;
-        $insert->received_message = "";
+        //$insert->received_message = "";
         $insert->delivery_datetime = null;
-        $insert->delivery_message = "";
+        //$insert->delivery_message = "";
         $insert->save();
         return redirect()->route('home')->with('Accept','Donation Request Accepted...');
     }
