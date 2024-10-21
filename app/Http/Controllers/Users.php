@@ -22,7 +22,7 @@ class Users extends Controller
     public function index(){
         $users = User::where('role_id','=','2')->count();
         $volunteer = User::where('role_id','=','3')->count();
-        $donation = Donation::where('status','=','Completed')->count();
+        $donation = Donation::where('status','=','Delivered')->count();
         $m_donation = MoneyDonation::where('payment_status', 'Completed')->sum('amt');
         return view('user.home',compact('users','volunteer','donation','m_donation'));
     }

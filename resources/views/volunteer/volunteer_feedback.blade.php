@@ -32,7 +32,7 @@
           <div class="partners">
             <div class="cont-details"><br><br><br>
            <div class="col-md-6 col-lg-7 col-xl-6">
-              <img src="feed_back.png" class="img-fluid" style="height: 200px; width: 300px;">
+              <img src="user/assets/images/feed_back.png" class="img-fluid" style="height: 200px; width: 400px;">
             </div>
             
             </div>

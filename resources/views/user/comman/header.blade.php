@@ -99,8 +99,6 @@
 												</div>	
 											</a>
 											<ul class="dropdown-menu drp-mnu">
-												<li> <a class="dropdown-item" href="my_post.php"><i class="fa fa-user"></i> My Post</a> </li>  
-												<li> <a class="dropdown-item" href="m_volunteer_profile.php"><i class="fa fa-suitcase"></i> Edit Profile</a> </li> 
 												<li class="dropdown-item">
 													<form method="post" action="{{ route('logout') }}">
 														@csrf

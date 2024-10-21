@@ -63,8 +63,6 @@
 													</div>	
 												</a>
 												<ul class="dropdown-menu drp-mnu">
-													<li><a class="dropdown-item" href="{{route('MyDonation',$userId)}}"><i class="fa fa-user"></i> My Donation</a></li>
-													<li><a class="dropdown-item" href="{{route('MyMoneyDonation',$userId)}}"><i class="fa fa-user"></i> My Money-Donation</a></li>
 													<li class="dropdown-item">
 														<form method="post" action="{{ route('logout') }}">
 															@csrf

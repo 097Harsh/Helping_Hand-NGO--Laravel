@@ -26,7 +26,7 @@ $total = $amt * 100;
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script>
         var options = {
-            "key": "rzp_test_rVGB7qLPvqr8cQ", // Enter your Razorpay Key ID
+            "key": "rzp_test_xeKqK1TUH8m6Ux", // Enter your Razorpay Key ID
             "amount": "{{ $total }}", // Amount in paisa
            
             "currency": "INR",
