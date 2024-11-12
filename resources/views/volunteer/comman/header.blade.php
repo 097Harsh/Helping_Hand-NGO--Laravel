@@ -76,9 +76,7 @@
 									</div>
 								</li>
 							@elseif($v_id)
-							<li class="nav-item">
-									<a class="nav-link" href="{{route('volunteer_feedback')}}">Feedback</a>
-								</li>
+							
 									<li class="nav-item">
 										<a class="nav-link" href="post_donation.php">Donation post</a>
 									</li>
