@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\donationemail;
+use App\Models\volunteer_acceptance;
 use Illuminate\Support\Facades\DB;
 use App\Models\Category;
 use App\Models\Donation;
@@ -169,7 +170,19 @@ class Users extends Controller
         //  echo $id;die;
         $donations = Donation::where('user_id',$id)->get();
         //echo "<pre>";print_r($donations);die;
-        $data = compact('donations');
+        $d_id = $donations->pluck('D_id');
+        $donation_status = $donations->pluck('status');
+        $volunteer_acceptance = volunteer_acceptance::whereIn('D_id', $d_id)->where('status', 'accepted')->get();
+        
+        // Get the D_ids from the accepted volunteer_acceptances
+        $accepted_d_ids = $volunteer_acceptance->pluck('D_id');
+        $v_id = $volunteer_acceptance->pluck('user_id')->first();
+       // echo $v_id;die;
+        $volunteer_data = User::where('user_id',$v_id)->get();
+        //volunteer contact
+        $volunteer_contact = $volunteer_data->pluck('contact')->first();
+
+        $data = compact('donations','donation_status','volunteer_contact');
         return view('user.my_donation')->with($data);
     }
     public function MyMoneyDonation($id){

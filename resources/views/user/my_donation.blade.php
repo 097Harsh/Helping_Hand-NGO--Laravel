@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="zxx">
 
@@ -44,7 +45,7 @@
                 <th scope="col">Date</th>
                 <th scope="col">Contact_Name</th>
                 <th scope="col">Contact_Number</th>
-                <th scope="col">Action</th>
+                <th scope="col">Status</th>                
               </tr>
             </thead>
             @if (!empty($donations))
